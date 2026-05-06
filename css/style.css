@@ -1,0 +1,412 @@
+/* Import Font: */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Cormorant+Garamond:wght@600;700&display=swap');
+
+/* Override font body lo supaya kalau Gotham gak ada, Montserrat yang gantiin */
+body {
+    font-family: 'Montserrat', 'Gotham', sans-serif;
+    background-color: var(--taupe-bg);
+    color: var(--deep-taupe);
+    line-height: 1.6;
+}
+
+/* Pastikan logo pakai Cormorant sesuai desain mewah di foto sebelumnya */
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+}
+:root {
+    --antique-gold: #A68B5B;  /* Emas tua, lebih kalem */
+    --deep-taupe: #201c18;    /* Warna kopi/abu tua untuk teks */
+    --taupe-bg: #bdbbb7;      /* Warna Beige/Taupe untuk background utama */
+    --dark-accent: #1A1A1A;
+    --brown-accent: #1c0101;   
+    --white: #ffffff;
+    --grey: #3f3f3f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gotham', sans-serif;
+    background-color: var(--taupe-bg);
+    color: var(--deep-taupe);
+    line-height: 1.6;
+}
+
+/* NAVBAR NATIVE */
+.navbar-native {
+    background-color: var(--dark-accent); /* Navbar gelap agar lebih maskulin */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-native {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 2px;
+    font-size: 26px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.logo span { color: var(--antique-gold); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li { margin-left: 35px; }
+
+.nav-links a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--antique-gold);
+}
+
+.btn-login-nav {
+    border: 1px solid var(--antique-gold);
+    padding: 8px 20px;
+    color: var(--antique-gold);
+}
+
+/* HERO SECTION */
+.hero-native {
+    padding: 120px 0;
+    background-color: var(--taupe-bg);
+}
+
+.hero-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text { flex: 1; }
+
+.hero-text h1 {
+    font: 'Gotham', sans-serif;
+    font-size: 50px;
+    color: var(--brown-accent);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: var(--grey);
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+.btn-dark {
+    background-color: var(--dark-accent);
+    color: var(--antique-gold);
+    padding: 18px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 3px;
+    display: inline-block;
+    transition: 0.4s;
+}
+
+.btn-dark:hover {
+    background-color: var(--antique-gold);
+}
+
+.hero-image { flex: 1; text-align: right; }
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    /* Efek bayangan tegas */
+    box-shadow: 30px 30px 0px var(--dark-accent);
+}
+
+/* CARDS COLLECTION */
+.section-title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+h2, h3{
+    font-family: 'Gotham', sans-serif;
+    color: var(--brown-accent);
+}
+
+.section-title p{
+    font: 'Gotham', sans-serif;
+    color: var(--grey);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-native {
+    background-color: #e1d5c5; /* Warna beige sedikit lebih terang dari BG */
+    padding-bottom: 30px;
+    transition: 0.4s;
+}
+
+.card-native:hover {
+    background-color: var(--white);
+    transform: translateY(-5px);
+}
+
+.card-native img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: grayscale(30%);
+}
+
+.card-content { padding: 25px; text-align: center; }
+.card-content h3 { font-size: 18px; margin-bottom: 10px; color: var(--dark-accent); }
+.card-content p { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--antique-gold); font-weight: bold; }
+
+/* FOOTER */
+.footer-native {
+    background-color: var(--dark-accent);
+    color: #666;
+    padding: 60px 0;
+    text-align: center;
+}
+/* --- LOGIN PAGE STYLES --- */
+.login-section {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Putih transparan sedikit */
+    padding: 60px 50px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.login-card h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.login-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--btn-black);
+}
+
+.btn-login {
+    width: 100%;
+    background-color: var(--dark-accent);
+    color: var(--antique-gold);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    opacity: 0.8;
+}
+
+.login-extra-native {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 15px;
+    color: var(--brown-accent);
+}
+
+.login-extra-native a {
+    color: var(--brown-accent);
+    text-decoration: none;
+}
+
+.login-footer-links p{
+    font: 'Montserrat', serif;
+    margin-top: 25px;
+    font-size: 13px;
+    text-transform: lowercase;
+}
+
+.login-footer-links a {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* Override bootstrap*/
+body {
+    font-family: 'Montserrat', 'Gotham', sans-serif;
+    background-color: var(--taupe-bg);
+    color: var(--deep-taupe);
+    line-height: 1.6;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+}
+
+/* Container tabel yang bisa di-scroll */
+.table-responsive {
+    max-height: 600px; /* Batasi tinggi agar muncul scroll */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Biar scrollbar-nya tipis & elegan */
+    scrollbar-color: var(--antique-gold) var(--taupe-bg);
+    border-bottom: 2px solid var(--dark-accent); /* Garis bawah penutup */
+}
+/* Gaya Tabel Editorial Octarine */
+.catalog-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.table-catalog {
+    border-top: 2px solid var(--dark-accent); /* Garis atas lebih tebal */
+    border-collapse: collapse;
+    width: 100%;
+    background-color: transparent;
+}
+
+.table-catalog th {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    padding: 25px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--grey);
+    font-weight: 700;
+}
+
+.table-catalog td {
+    padding: 30px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Garis tabel tipis */
+    vertical-align: middle;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Styling Nama Produk ala Cormorant */
+.product-name-cell {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--brown-accent);
+}
+
+.product-img-thumb {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    filter: contrast(1.1);
+    margin-left: 15px;  
+    margin-right: 15px;
+}
+
+.scent-desc {
+    font-size: 13px;
+    color: var(--grey);
+    max-width: 300px;
+    line-height: 1.4;
+}
+
+.price-text {
+    font-weight: 700;
+    color: var(--dark-accent);
+    letter-spacing: 1px;
+}
+
+.btn-view {
+    border: 1px solid var(--dark-accent);
+    background: transparent;
+    color: var(--dark-accent);
+    padding: 10px 20px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-view:hover {
+    background-color: var(--dark-accent);
+    color: var(--antique-gold);
+}
+/* Custom scrollbar untuk browser modern */
+.table-responsive::-webkit-scrollbar {
+    width: 6px;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+    background-color: var(--antique-gold);
+}
